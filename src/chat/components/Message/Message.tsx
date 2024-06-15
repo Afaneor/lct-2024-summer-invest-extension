@@ -3,8 +3,8 @@ import { Col, Row, Space, Spin } from 'antd'
 import styles from './style.module.scss'
 import { FCC } from 'src/types'
 import clsx from 'clsx'
-import { useDateTimePrettyStr } from 'src/hooks/useDateTimePrettyStr'
-import { Markdown } from 'src/components'
+import { useDateTimePrettyStr } from 'src/chat/hooks/useDateTimePrettyStr'
+import Markdown from 'src/chat/components/Markdown/Markdown'
 
 interface MessageProps {
   id: number | string

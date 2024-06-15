@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './style.module.scss'
 import { FCC } from 'src/types'
 import { Card } from 'antd'
-import { BebasNeueTitle, Message, InputMessageContainer } from 'src/components'
+import BebasNeueTitle from 'src/chat/components/BebasNeueTitle/BebasNeueTitle'
+import InputMessageContainer from 'src/chat/components/InputMessageContainer/InputMessageContainer'
+import Message from 'src/chat/components/Message/Message'
 
 interface SmartChatContainerProps {
   isOpen?: boolean
@@ -46,7 +48,7 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = () => {
           ...prevState,
           {
             id: `hello-${new Date().getTime()}`,
-            text: '### Привет! Чем могу помочь?',
+            text: '## Привет! Чем могу помочь?',
             datetime: new Date().toISOString(),
             type: 'assistant',
           },

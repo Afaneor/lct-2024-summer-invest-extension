@@ -1,5 +1,5 @@
 import React from 'react'
-import { SmartChatContainer } from 'src/components'
+import { SmartChatContainer } from 'src/chat/SmartChatContainer'
 
 export const App: React.FC = () => {
   return (
