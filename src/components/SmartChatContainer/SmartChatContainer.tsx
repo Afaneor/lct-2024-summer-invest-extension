@@ -18,6 +18,10 @@ export interface MessageData {
 
 const bodyStyle = {
   padding: 8,
+  height: '100%',
+  overflowY: 'auto',
+  scrollbarWidth: 'none',
+  msOverflowStyle: 'none',
 } as React.CSSProperties
 
 let sayHello = false
@@ -77,10 +81,11 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
           type: 'assistant',
         },
       ])
-    }, 2000)
+    }, 1000)
   }
   return (
     <Card
+      bordered={false}
       title={
         <BebasNeueTitle
           title={'Умный помощник'}
@@ -90,22 +95,19 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
           }}
         />
       }
-      className={`${styles.container} ${isOpen ? styles.open : ''}`}
-      style={{
-        // height: height * 0.7,
-        right: isOpen ? 40 : -1000,
-      }}
+      className={styles.container}
       headStyle={headStyle}
       bodyStyle={bodyStyle}
+      actions={[
+        <div className={styles.cardFooter}>
+          <InputMessageContainer
+            isDisabled={isLoading}
+            onSend={onAddNewMessage}
+          />
+        </div>,
+      ]}
     >
-      <div
-        id={'scrollContainer'}
-        style={{
-          height: height * 0.7 - 120,
-          overflowY: 'auto',
-        }}
-        className={styles.scrollContainer}
-      >
+      <div>
         {fakeData.map((item) => (
           <Message
             key={item.id}
@@ -125,7 +127,6 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
         ) : null}
         <div ref={messagesEndRef} />
       </div>
-      <InputMessageContainer isDisabled={isLoading} onSend={onAddNewMessage} />
     </Card>
   )
 }
