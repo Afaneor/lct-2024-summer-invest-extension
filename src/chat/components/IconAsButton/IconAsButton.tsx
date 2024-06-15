@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './style.module.scss'
-import { FCC } from 'src/types'
+import { FCC } from '../../types'
 
 interface IconAsButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon: any

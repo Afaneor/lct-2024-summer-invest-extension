@@ -1,13 +1,12 @@
-import { FilterConfirmProps } from 'antd/lib/table/interface'
+import { FC, PropsWithChildren, SyntheticEvent } from 'react'
+import type { Dayjs } from 'dayjs'
 
-export interface SomeObject {
-  [key: string]: any
+// eslint-disable-next-line @typescript-eslint/naming-convention,@typescript-eslint/ban-types
+export type FCC<P = {}> = FC<PropsWithChildren<P>>
+export type Nullable<T> = T | null
+export type HTMLElementEvent<T extends HTMLElement> = SyntheticEvent & {
+  target: T
 }
+export type RangeValue = [Dayjs | null, Dayjs | null] | null
 
-export interface FilterDropdownProps {
-  setSelectedKeys: (val: string[]) => void
-  selectedKeys: string[]
-  confirm: (param?: FilterConfirmProps) => void
-  clearFilters: () => void
-  close: () => void
-}
+export type EntityTypes = 'asset' | 'leak' | 'service' | 'vulnerability'

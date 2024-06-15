@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './style.module.scss'
-import { FCC } from 'src/types'
+import { FCC } from '../../types'
 import { Card } from 'antd'
-import BebasNeueTitle from 'src/chat/components/BebasNeueTitle/BebasNeueTitle'
-import InputMessageContainer from 'src/chat/components/InputMessageContainer/InputMessageContainer'
-import Message from 'src/chat/components/Message/Message'
+import BebasNeueTitle from '../components/BebasNeueTitle/BebasNeueTitle'
+import InputMessageContainer from '../components/InputMessageContainer/InputMessageContainer'
+import Message from '../components/Message/Message'
 
 interface SmartChatContainerProps {
   isOpen?: boolean

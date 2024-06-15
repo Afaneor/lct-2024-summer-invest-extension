@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Button, Input, Upload, Row, Col, Form } from 'antd'
 import { SendOutlined, PaperClipOutlined } from '@ant-design/icons'
 import IconAsButton from '../IconAsButton/IconAsButton'
-import { FCC } from 'src/types'
+import { FCC } from '../../types'
 const { TextArea } = Input
 
 interface InputMessageContainerProps {

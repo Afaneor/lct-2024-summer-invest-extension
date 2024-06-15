@@ -1,7 +1,7 @@
 import { Typography } from 'antd'
 import type { TitleProps } from 'antd/es/typography/Title'
 import React from 'react'
-import type { FCC } from 'src/types'
+import type { FCC } from '../../types'
 
 import styles from './BebasNeueTitle.module.scss'
 
