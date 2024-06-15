@@ -20,6 +20,8 @@ const bodyStyle = {
   padding: 8,
   height: '100%',
   overflowY: 'auto',
+  scrollbarWidth: 'none',
+  msOverflowStyle: 'none',
 } as React.CSSProperties
 
 let sayHello = false
@@ -79,7 +81,7 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
           type: 'assistant',
         },
       ])
-    }, 2000)
+    }, 1000)
   }
   return (
     <Card
@@ -105,7 +107,7 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
         </div>,
       ]}
     >
-      <div className={styles.scrollContainer}>
+      <div>
         {fakeData.map((item) => (
           <Message
             key={item.id}

@@ -44,7 +44,6 @@ if (!appContainer) {
   iframe.style.zIndex = '100000'
   iframe.style.border = 'none'
   iframe.style.display = 'none' // Начнем с того, что контейнер скрыт
-  iframe.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)'
 
   // Устанавливаем источник iframe на ваш файл
   iframe.src = chrome.runtime.getURL('iframe.html')
@@ -68,6 +67,7 @@ if (!appContainer) {
   toggleButton.style.display = 'flex'
   toggleButton.style.alignItems = 'center'
   toggleButton.style.justifyContent = 'center'
+  toggleButton.style.boxShadow = '0 2px 5px rgba(0,0,0,0.3)' // Добавляем тень для лучшего визуального эффекта
 
   // Добавляем иконку в кнопку
   const icon = document.createElement('img')
