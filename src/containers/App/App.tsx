@@ -5,11 +5,16 @@ export const App: React.FC = () => {
   // const { currentUserInfo, isLoading } = useContext(CurrentUserContext)
   const [show, setShow] = useState(true)
   return (
-    <div>
+    <div
+      style={{
+        height: '100vh',
+        padding: '5px',
+      }}
+    >
       <SmartChatContainer isOpen={show} />
-      <Suspense fallback={null}>
-        <MainChatBtn isActive={show} onClick={() => setShow(!show)} />
-      </Suspense>
+      {/*<Suspense fallback={null}>*/}
+      {/*  <MainChatBtn isActive={show} onClick={() => setShow(!show)} />*/}
+      {/*</Suspense>*/}
     </div>
   )
 }

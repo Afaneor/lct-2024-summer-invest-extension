@@ -18,7 +18,13 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["static/js/*", "static/css/*"],
+      "resources": [
+        "iframe.html",
+        "static/js/*",
+        "static/css/*",
+        "icons/chat-outline.png",
+        "icons/close.png"
+      ],
       "matches": ["https://investmoscow.ru/*", "http://investmoscow.ru/*"]
     }
   ]
