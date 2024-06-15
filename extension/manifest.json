@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_app_name__",
+  "default_locale": "ru",
+  "version": "1.0",
+  "description": "__MSG_app_slogan__",
+  "icons": {},
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://investmoscow.ru/*", "http://investmoscow.ru/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["static/js/*", "static/css/*"],
+      "matches": ["https://investmoscow.ru/*", "http://investmoscow.ru/*"]
+    }
+  ]
+}

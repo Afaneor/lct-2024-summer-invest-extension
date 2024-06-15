@@ -1,0 +1,11 @@
+{
+  "app_name":{
+    "message":"DST invest plugin",
+    "description":"the name of the extension",
+    "inMozDTD":true
+  },
+  "app_slogan": {
+    "message": "Invest in DST",
+    "description": "the slogan of the extension"
+  }
+}

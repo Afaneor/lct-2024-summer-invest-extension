@@ -1,0 +1,11 @@
+{
+  "app_name": {
+    "message": "Инвест плагин",
+    "description": "the name of the extension",
+    "inMozDTD": true
+  },
+  "app_slogan": {
+    "message": "Ивестируйте в свои проекты",
+    "description": "the slogan of the extension"
+  }
+}
