@@ -6,7 +6,7 @@ import BebasNeueTitle from '../components/BebasNeueTitle/BebasNeueTitle'
 import InputMessageContainer from '../components/InputMessageContainer/InputMessageContainer'
 import Message from '../components/Message/Message'
 
-interface SmartChatContainerProps {
+interface SmartChatProps {
   isOpen?: boolean
 }
 
@@ -29,7 +29,7 @@ let sayHello = false
 
 const headStyle = { backgroundColor: '#3A3A3A' } as React.CSSProperties
 
-export const SmartChatContainer: FCC<SmartChatContainerProps> = () => {
+export const SmartChat: FCC<SmartChatProps> = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [fakeData, setFakeData] = useState([] as MessageData[])
   const messagesEndRef = useRef<null | HTMLDivElement>(null)
@@ -129,6 +129,6 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = () => {
   )
 }
 
-SmartChatContainer.displayName = 'SmartChatContainer'
+SmartChat.displayName = 'SmartChat'
 
-export default SmartChatContainer
+export default SmartChat

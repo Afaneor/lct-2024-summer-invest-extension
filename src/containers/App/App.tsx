@@ -1,5 +1,5 @@
 import React from 'react'
-import { SmartChatContainer } from 'src/chat/SmartChatContainer'
+import { SmartChat } from 'src/chat/SmartChat'
 
 export const App: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const App: React.FC = () => {
         padding: '5px',
       }}
     >
-      <SmartChatContainer />
+      <SmartChat />
     </div>
   )
 }
