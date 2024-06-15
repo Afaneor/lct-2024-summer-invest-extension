@@ -3,7 +3,6 @@ import styles from './style.module.scss'
 import { FCC } from 'src/types'
 import { Card } from 'antd'
 import { BebasNeueTitle, Message, InputMessageContainer } from 'src/components'
-import { useGetWindowHeight } from 'src/hooks/useGetWindowHeight'
 
 interface SmartChatContainerProps {
   isOpen?: boolean
@@ -28,12 +27,9 @@ let sayHello = false
 
 const headStyle = { backgroundColor: '#3A3A3A' } as React.CSSProperties
 
-export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
-  isOpen,
-}) => {
+export const SmartChatContainer: FCC<SmartChatContainerProps> = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [fakeData, setFakeData] = useState([] as MessageData[])
-  const height = useGetWindowHeight()
   const messagesEndRef = useRef<null | HTMLDivElement>(null)
 
   useEffect(() => {
@@ -43,7 +39,7 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
   }, [fakeData])
 
   useEffect(() => {
-    if (isOpen && !sayHello) {
+    if (!sayHello) {
       sayHello = true
       setTimeout(() => {
         setFakeData((prevState) => [
@@ -57,7 +53,7 @@ export const SmartChatContainer: FCC<SmartChatContainerProps> = ({
         ])
       }, 1000)
     }
-  }, [isOpen])
+  }, [])
 
   const onAddNewMessage = (text: string) => {
     setFakeData((prevState) => [

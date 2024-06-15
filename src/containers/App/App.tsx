@@ -1,9 +1,7 @@
-import React, { Suspense, useState } from 'react'
-import { MainChatBtn, SmartChatContainer } from 'src/components'
+import React from 'react'
+import { SmartChatContainer } from 'src/components'
 
 export const App: React.FC = () => {
-  // const { currentUserInfo, isLoading } = useContext(CurrentUserContext)
-  const [show, setShow] = useState(true)
   return (
     <div
       style={{
@@ -11,10 +9,7 @@ export const App: React.FC = () => {
         padding: '5px',
       }}
     >
-      <SmartChatContainer isOpen={show} />
-      {/*<Suspense fallback={null}>*/}
-      {/*  <MainChatBtn isActive={show} onClick={() => setShow(!show)} />*/}
-      {/*</Suspense>*/}
+      <SmartChatContainer />
     </div>
   )
 }
