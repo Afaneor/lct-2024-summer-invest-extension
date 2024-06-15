@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Col, Row, Space, Spin } from 'antd'
 import styles from './style.module.scss'
 import { FCC } from 'src/types'
@@ -28,13 +28,15 @@ export const Message: FCC<MessageProps> = ({
   isLoading,
 }) => {
   const { dateFormatter } = useDateTimePrettyStr()
-
+  const currentJustify = useMemo(
+    () => (type === 'user' ? 'end' : 'start'),
+    [type]
+  )
   return (
-    <Row justify={type === 'user' ? 'end' : 'start'} className={styles.row}>
-      <Col span={colWidth}>
-        <Row>
+    <Row className={styles.row}>
+      <Col span={24}>
+        <Row justify={currentJustify}>
           <Col
-            span={24}
             className={clsx(styles.container, {
               [styles.user]: type === 'user',
               [styles.assistant]: type === 'assistant',
@@ -45,15 +47,13 @@ export const Message: FCC<MessageProps> = ({
               <Markdown content={text} />
             </Space>
           </Col>
-        </Row>
-      </Col>
-      <Col span={colWidth}>
-        <Row justify={type === 'user' ? 'end' : 'start'}>
-          <Col>
-            <h5 className={styles.whoAndDate}>
-              {who[type]}
-              {datetime ? `, ${dateFormatter({ date: datetime })}` : null}
-            </h5>
+          <Col span={24}>
+            <Row justify={currentJustify}>
+              <h5 className={styles.whoAndDate}>
+                {who[type]}
+                {datetime ? `, ${dateFormatter({ date: datetime })}` : null}
+              </h5>
+            </Row>
           </Col>
         </Row>
       </Col>

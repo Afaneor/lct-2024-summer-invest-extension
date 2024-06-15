@@ -68,7 +68,6 @@ if (!appContainer) {
   toggleButton.style.display = 'flex'
   toggleButton.style.alignItems = 'center'
   toggleButton.style.justifyContent = 'center'
-  toggleButton.style.boxShadow = '0 2px 5px rgba(0,0,0,0.3)' // Добавляем тень для лучшего визуального эффекта
 
   // Добавляем иконку в кнопку
   const icon = document.createElement('img')
