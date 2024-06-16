@@ -1,5 +1,9 @@
 # Плагин для работы с проектом dolma на сайте investmoscow.ru
 
+## Связанные репозитории
+- [Клиентская часть](https://github.com/Afaneor/lct-2024-summer-invest-frontend)
+- [Серверная часть приложения](https://github.com/Afaneor/lct-2024-summer-invest-backend)
+
 ## Пошаговая инструкция по установке расширения "Умный помощник DOLMA" для Google Chrome через загрузку распакованного расширения:
 
 ### Инструкция по установке распакованного расширения в Google Chrome
